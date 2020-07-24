@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caculator</title>
+    <style>
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            margin: 2px;
+            cursor: pointer;
+            background: #607d8b;
+            color: #fff;
+            border: none;
+        }
+
+        .button-last {
+            width: 108px;
+            height: 50px;
+            font-size: 25px;
+            margin: 2px;
+            cursor: pointer;
+            background: #607d8b;
+            color: #fff;
+            border: none;
+        }
+
+        input[type="text"] {
+            width: 215px;
+            margin: 3px;
+            font-size: 25px;
+            padding: 3px;
+            text-align: right;
+        }
+
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        body {
+            background: linear-gradient(to right, #e91e63, #3f51b5);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="main">
+        <form action="" name="form">
+            <input type="text" name="textview">
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" value="C" class="button" onclick="clean()"></td>
+                <td><input type="button" value="<" class="button" onclick="back()"></td>
+                <td><input type="button" value="/" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="x" class="button" onclick="insert(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="8" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="9" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="-" class="button" onclick="insert(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="5" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="6" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="+" class="button" onclick="insert(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="2" class="button" onclick="insert(this.value)"></td>
+                <td><input type="button" value="3" class="button" onclick="insert(this.value)"></td>
+                <td rowspan="2"><input style="height: 106px;" type="button" value="=" class="button" onclick="equal()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0" class="button-last" onclick="insert(this.value)"></td>
+                <td><input type="button" value="." class="button" onclick="insert(this.value)"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function insert(num) {
+            document.form.textview.value += num;
+        }
+
+        function equal() {
+            const params = document.form.textview.value;
+            if (params) {
+                document.form.textview.value = eval(params);
+            }
+        }
+        function clean() {
+            document.form.textview.value = '';
+        }
+        function back() {
+            const params = document.form.textview.value;
+            document.form.textview.value = params.substring(0, params.length - 1);
+        }
+    </script>
+</body>
+
+</html>

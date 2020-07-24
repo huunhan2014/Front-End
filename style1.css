@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+	font-family:"Times New Roman", Times, serif;
+	background:#FFA7E7;
+
+}
+.box{
+	width:300px;
+	padding:50px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:#A1F1F5;
+	text-align:center;
+	}
+.box h1{
+	color: green;
+	text-transform: uppercase;
+	font-weight: 450px;
+}
+.box input[type ="text"], .box input[type="password"]{
+	border: medium solid #FF060A;
+	background: #F5E6B0;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	width: 200px;
+	padding: 15px 10px; 
+	outline: none;
+	color: blue;
+	border-radius: 1000px;
+	transition: 0.3s;
+}
+.box input[type ="text"]:focus, .box input[type="password"]:focus{
+	border-color: darkorange;
+	width: 250px;	
+	
+}
+.box input[type="submit"]{
+		border: 2px dotted #9700B8;
+	background: #F5E6B0;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	padding: 15px 40px; 
+	outline: none;
+	color: blue;
+	border-radius: 30px;
+	transition: 3s;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.box input[type="submit"]:hover{
+	background: #55C80E;
+	color: aqua;
+}

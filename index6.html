@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexBox</title>
+    <style>
+        @media(min-width: 880px) {
+            .container-2 {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        .container-1 {
+            display: flex;
+            /* 
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center; 
+            flex-direction: row;
+            */
+        }
+
+        .container-1 div,
+        .container-2 div,
+        .container-3 div {
+            border: 1px solid #000000;
+            padding: 10px;
+        }
+
+        .box-1 {
+            flex: 1;
+            order: 1;
+        }
+
+        .box-2 {
+            flex: 2;
+            order: 2;
+        }
+
+        .box-3 {
+            flex: 1;
+            order: 3;
+        }
+
+        .container-2-box {
+            flex-basis: 30%;
+        }
+
+        .container-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .container-3-box {
+            flex-basis: 12%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container-1">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="box-2">
+            <h3>Box Two</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+    </div> -->
+    <br>
+    <!-- <div class="container-2">
+        <div class="container-2-box">
+            <h3>Box One</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box Two</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box Three</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+    </div> -->
+
+    <div class="container-3">
+        <div class="container-3-box">
+            <h3>Box One</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Two</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Three</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Four</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Five</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Six</h3>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+            <p> Nguyen Huu Nhan Nguyen Huu Nhan Nguyen Huu Nhan </p>
+        </div>
+    </div>
+</body>
+
+</html>

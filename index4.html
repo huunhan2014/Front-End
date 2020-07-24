@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Code cung code dao</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            margin: auto;
+            width: fit-content;
+        }
+
+        .img {
+            width: 200px;
+        }
+
+        #right-img {
+            position: relative;
+            top: -10px;
+            left: 10px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        #status {
+            font-size: large;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/samples/100x100/image_02.jpg" alt="" class="img">
+    </div>
+    <div>
+        <img src="images/samples/100x100/image_05.jpg" alt="" class="imgCenter" id="left-img">
+        <img src="images/samples/100x100/image_10.jpg" alt="" class="imgCenter" id="right-img">
+    </div>
+    <div>
+        <img src="images/samples/100x100/image_11.jpg" alt="" class="img">
+    </div>
+    <span id="status">Static Images</span>
+
+    <script>
+        function playSound() {
+            const audio = new Audio('example.mp3');
+            audio.play();
+        }
+        const imgRight = document.querySelector('#right-img');
+        const status = document.querySelector('#status');
+        imgRight.onclick = () => {
+            playSound();
+            imgRight.style.top='-30px';
+            setTimeout(()=>{
+                imgRight.style.top='-10px';
+
+            },1000);
+        }
+        imgRight.onmouseover=()=>{
+            imgRight.style.width='110px';
+            status.innerText='Hover Image';
+        }
+        imgRight.onmouseleave=()=>{
+            imgRight.style.width='100px';
+            status.innerText='Statis Images';
+
+        }
+    </script>
+</body>
+
+</html>
