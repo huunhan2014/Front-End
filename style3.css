@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkcyan;
+  background-color: darkslategrey;
   height: 100vh;
   font-family: "Times New Roman", Times, serif;
 }

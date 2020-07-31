@@ -1,0 +1,21 @@
+body {
+    margin: auto;
+    width: fit-content;
+}
+
+.img {
+    width: 200px;
+}
+
+#right-img {
+    position: relative;
+    top: -10px;
+    left: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#status {
+    font-size: large;
+    color: blueviolet;
+}
